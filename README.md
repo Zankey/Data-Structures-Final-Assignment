@@ -10,4 +10,4 @@ The assignment called for lazy deletion, so when removing a node, it only become
 
 The Result Interface and the UnderflowException class are required.
 
-This was structured around Weiss code yet most is original. I have commented the few pieces that arent my own work.
+This was structured around Weiss code yet most is original. I have commented //*Weiss* for the few pieces that were taken from the Weiss Data structures Textbook and not original work.
