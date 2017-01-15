@@ -7,3 +7,7 @@ This was a modification of an AVL tree to allow for duplicate nodes.
 My design took all duplicates and placed them behind its original node as if it were a three dimensional tree. 
 
 The assignment called for lazy deletion, so when removing a node, it only becomes logically deleted.
+
+The Result Interface and the UnderflowException class are required.
+
+This was structured around Weiss code yet most is original. I have commented the few pieces that arent my own work.
