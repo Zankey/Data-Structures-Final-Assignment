@@ -15,11 +15,12 @@ import java.io.PrintWriter;
 import weiss.util.Stack;
 
 public class A2233TMarAVL <AnyType extends Comparable<? super AnyType>> {
-    //tree constructor
+    //tree constructor *Weiss*
     public A2233TMarAVL() {
         root = null;
     }
-
+    
+    //*Weiss*
     public void insert(AnyType x) {
         root = insert(x, root);
     }
@@ -47,7 +48,7 @@ public class A2233TMarAVL <AnyType extends Comparable<? super AnyType>> {
         return findMax(root).element;
     }
 
-    //returns true if x exists
+    //returns true if x exists *Weiss*
     public boolean contains(AnyType x) {
         return contains(x, root);
     }
@@ -59,12 +60,13 @@ public class A2233TMarAVL <AnyType extends Comparable<? super AnyType>> {
     }
 
 
-    //Test if the tree is logically empty.
+    //Test if the tree is logically empty. *Weiss*
     public boolean isEmpty() {
         return root == null;
     }
 
-    public void printTree() {
+    //*Weiss*
+    public void printTree() { 
         if (isEmpty())
             System.out.println("Tree is currently Empty");
         else
@@ -160,6 +162,7 @@ public class A2233TMarAVL <AnyType extends Comparable<? super AnyType>> {
     //@param x is item to search for.
     //@param t the node that roots the tree.
     //@return true if x is found in subtree.
+    // *Weiss*
     public boolean contains(AnyType x, A2233TMarAvlNode<AnyType> t) {
 
         while (t != null) {
@@ -421,10 +424,12 @@ public class A2233TMarAVL <AnyType extends Comparable<? super AnyType>> {
     }
 
     //Return the height of node t, or -1, if null.
+    //*Weiss*
     public int height(A2233TMarAvlNode<AnyType> t) {
         return t == null ? -1 : t.height;
     }
 
+    //Roatation methods are all from Weiss
     public A2233TMarAvlNode<AnyType> rotateWithLeftChild(A2233TMarAvlNode<AnyType> k2) {
         A2233TMarAvlNode<AnyType> k1 = k2.left;
         k2.left = k1.right;
@@ -530,7 +535,8 @@ public class A2233TMarAVL <AnyType extends Comparable<? super AnyType>> {
                 new A2233TMarResult(newMode.element, newMode.duplicateCount + 1);
         return r;
     }
-
+    
+    //Result Obj that stores mode info
     public static class A2233TMarResult
             <AnyType extends Comparable<? super AnyType>> implements Result {
 
